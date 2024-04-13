@@ -1,0 +1,9 @@
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Final_Project.dir
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install.dir
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Final_Project_autogen_timestamp_deps.dir
+F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Final_Project_autogen.dir

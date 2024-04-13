@@ -1,0 +1,9 @@
+# ninja log v5
+1	242	7346757703482433	Final_Project_autogen/timestamp	c4274e6d56c59b21
+1	242	7346757703482433	Final_Project_autogen/mocs_compilation.cpp	c4274e6d56c59b21
+1	242	7346757703482433	F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Final_Project_autogen/timestamp	c4274e6d56c59b21
+1	242	7346757703482433	F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Final_Project_autogen/mocs_compilation.cpp	c4274e6d56c59b21
+242	407	7346757705515931	CMakeFiles/Final_Project.dir/Final_Project_autogen/mocs_compilation.cpp.obj	9bc40ca1e06a2fb
+263	1826	7346757719688168	CMakeFiles/Final_Project.dir/MyRect.cpp.obj	592f27ba1edc7b8b
+259	2021	7346757721648385	CMakeFiles/Final_Project.dir/main.cpp.obj	2a3a795661e721e8
+2022	2213	7346757723539824	Final_Project.exe	f2a968a748c81af7
