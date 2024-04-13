@@ -1,5 +1,8 @@
 #include "Bullet.h"
 #include <QTimer>
+#include <QGraphicsScene>
+#include <iostream>
+#include <QDebug>
 
 Bullet::Bullet() {
     // creates the bullet
@@ -17,4 +20,8 @@ void Bullet::move()
     // move bullet up
     int speed = 10;
     setPos(x(),y()-speed);
+    if (pos().y() < 0) {
+        scene()->removeItem(this);
+        delete this;
+    }
 }

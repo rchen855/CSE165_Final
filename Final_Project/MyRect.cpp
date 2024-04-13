@@ -20,7 +20,7 @@ void MyRect::keyPressEvent(QKeyEvent *event) {
     else if (event->key() == Qt::Key_Space) {
         // create a bullet
         Bullet* bullet = new Bullet();
-        bullet->setPos(x()+47.5,y());
+        bullet->setPos(x()+47.5,y()-50);
         scene()->addItem(bullet);
     }
 };
