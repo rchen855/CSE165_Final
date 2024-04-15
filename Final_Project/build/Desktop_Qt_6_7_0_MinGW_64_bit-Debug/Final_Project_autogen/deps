@@ -506,12 +506,16 @@ Final_Project_autogen/timestamp: \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/Bullet.cpp \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/Bullet.h \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/CMakeLists.txt \
-	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/MyRect.cpp \
-	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/MyRect.h \
+	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/Enemy.cpp \
+	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/Enemy.h \
+	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/Player.cpp \
+	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/Player.h \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/3.27.7/CMakeSystem.cmake \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Final_Project_autogen/moc_predefs.h \
+	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/game.cpp \
+	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/game.h \
 	F:/UCM/Year_4/sem2/cse165/Final\ Project/CSE165_Final/Final_Project/main.cpp \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

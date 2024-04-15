@@ -23,10 +23,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Final_Project
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        MyRect.h
-        MyRect.cpp
+        Player.h
+        Player.cpp
         Bullet.h
         Bullet.cpp
+        Enemy.h
+        Enemy.cpp
+        game.h game.cpp
+        Score.h
+        Score.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Final_Project APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

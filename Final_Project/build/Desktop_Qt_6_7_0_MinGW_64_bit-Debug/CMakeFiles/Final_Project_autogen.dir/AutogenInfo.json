@@ -261,9 +261,27 @@
 			null
 		],
 		[
-			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/MyRect.h",
+			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/Enemy.h",
 			"MU",
-			"EWIEGA46WW/moc_MyRect.cpp",
+			"EWIEGA46WW/moc_Enemy.cpp",
+			null
+		],
+		[
+			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/Player.h",
+			"MU",
+			"EWIEGA46WW/moc_Player.cpp",
+			null
+		],
+		[
+			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/Score.h",
+			"MU",
+			"EWIEGA46WW/moc_Score.cpp",
+			null
+		],
+		[
+			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/game.h",
+			"MU",
+			"EWIEGA46WW/moc_game.cpp",
 			null
 		]
 	],
@@ -344,7 +362,22 @@
 			null
 		],
 		[
-			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/MyRect.cpp",
+			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/Enemy.cpp",
+			"MU",
+			null
+		],
+		[
+			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/Player.cpp",
+			"MU",
+			null
+		],
+		[
+			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/Score.cpp",
+			"MU",
+			null
+		],
+		[
+			"F:/UCM/Year_4/sem2/cse165/Final Project/CSE165_Final/Final_Project/game.cpp",
 			"MU",
 			null
 		],
