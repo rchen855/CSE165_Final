@@ -20,7 +20,7 @@ Health::~Health() {
 
 void Health::decrease() {
     health--;
-    if (getHealth() < 0) {
+    if (getHealth() == -1) {
         for (int i = 0; i < game->scene->items().size(); i++) {
             game->scene->items()[i]->setEnabled(false);
             game->scene->items()[i]->setOpacity(0);

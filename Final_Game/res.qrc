@@ -3,6 +3,7 @@
         <file>external/arrow.mp3</file>
         <file>external/bgm.mp3</file>
         <file>external/death.mp3</file>
+        <file>external/gameover.mp3</file>
     </qresource>
     <qresource prefix="/images">
         <file>external/arrow.png</file>

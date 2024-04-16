@@ -168,6 +168,12 @@ void Game::displayMenu() {
 
 void Game::gameOver() {
     timer->stop();
+    QMediaPlayer* music = new QMediaPlayer();
+    QAudioOutput* audio = new QAudioOutput();
+    music->setAudioOutput(audio);
+    music->setSource(QUrl("qrc:/sounds/external/gameover.mp3"));
+    audio->setVolume(0.75);
+    music->play();
     // title text
     QGraphicsTextItem* gameOver = new QGraphicsTextItem(QString("Game Over!"));
     QFont gameOverFont("comic sans",50);
