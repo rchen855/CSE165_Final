@@ -1,4 +1,4 @@
-#include "Score.h"
+#include "Headers/Score.h"
 #include <QFont>
 
 Score::Score(QGraphicsItem *parent): QGraphicsTextItem(parent) {
@@ -11,8 +11,12 @@ Score::Score(QGraphicsItem *parent): QGraphicsTextItem(parent) {
     setFont(QFont("times",16));
 }
 
-void Score::increase() {
-    score++;
+Score::~Score() {
+    // Destructor
+}
+
+void Score::increase(int num) {
+    score += num;
     setPlainText("Score: " + QString::number(score));
 }
 

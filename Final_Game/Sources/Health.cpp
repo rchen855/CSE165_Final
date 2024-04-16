@@ -1,5 +1,5 @@
-#include "Health.h"
-#include "Game.h"
+#include "Headers/Health.h"
+#include "Headers/Game.h"
 #include <QFont>
 
 extern Game* game;
@@ -12,6 +12,10 @@ Health::Health(QGraphicsItem *parent): QGraphicsTextItem(parent) {
     setPlainText("Health: " + QString::number(health));
     setDefaultTextColor(Qt::red);
     setFont(QFont("times",16));
+}
+
+Health::~Health() {
+    // Destructor
 }
 
 void Health::decrease() {

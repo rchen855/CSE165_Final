@@ -10,21 +10,25 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    Bullet.cpp \
-    Enemy.cpp \
-    game.cpp \
-    Player.cpp \
-    Score.cpp \
-    Health.cpp
+    Sources/FasterEnemy.cpp \
+    Sources/TankEnemy.cpp \
+    Sources/main.cpp \
+    Sources/Bullet.cpp \
+    Sources/Enemy.cpp \
+    Sources/game.cpp \
+    Sources/Player.cpp \
+    Sources/Score.cpp \
+    Sources/Health.cpp
 
 HEADERS += \
-    Bullet.h \
-    Enemy.h \
-    Game.h \
-    Player.h \
-    Score.h \
-    Health.h
+    Headers/Bullet.h \
+    Headers/Enemy.h \
+    Headers/FasterEnemy.h \
+    Headers/Game.h \
+    Headers/Player.h \
+    Headers/Score.h \
+    Headers/Health.h \
+    Headers/TankEnemy.h
 
 RESOURCES += \
     res.qrc

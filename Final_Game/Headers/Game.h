@@ -1,9 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "Player.h"
-#include "Score.h"
-#include "Health.h"
+#include "Headers/Player.h"
+#include "Headers/Score.h"
+#include "Headers/Health.h"
 #include <QGraphicsView>
 #include <QWidget>
 #include <QGraphicsScene>

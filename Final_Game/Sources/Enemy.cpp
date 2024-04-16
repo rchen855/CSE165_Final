@@ -1,6 +1,6 @@
-#include "Enemy.h"
-#include "Player.h"
-#include "Game.h"
+#include "Headers/Enemy.h"
+#include "Headers/Player.h"
+#include "Headers/Game.h"
 #include <QTimer>
 #include <QGraphicsScene>
 #include <QDebug>
@@ -9,10 +9,12 @@
 extern Game* game;
 
 Enemy::Enemy() {
+    health = 1;
+    speed = 5;
     int random_number = rand() % 700;
     setPos(random_number,0);
 
-    // creates the bullet
+    // creates the Enemy
     setPixmap(QPixmap(":/images/external/enemy.png"));
 
     // connect
@@ -22,10 +24,21 @@ Enemy::Enemy() {
     timer->start(50);
 }
 
+int Enemy::getHealth() {
+    return health;
+}
+
+void Enemy::decreaseHealth() {
+    health--;
+}
+
+void Enemy::setHealth(int h) {
+    health = h;
+}
+
 void Enemy::move()
 {
     // move enemy down
-    int speed = 5;
     setPos(x(),y()+speed);
     if (pos().y() > 800) {
         scene()->removeItem(this);

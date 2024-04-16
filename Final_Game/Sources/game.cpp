@@ -1,7 +1,7 @@
-#include "Game.h"
+#include "Headers/Game.h"
+#include "Headers/Player.h"
 #include <QApplication>
 #include <QGraphicsScene>
-#include "Player.h"
 #include <QGraphicsView>
 #include <QTimer>
 #include <QMediaPlayer>

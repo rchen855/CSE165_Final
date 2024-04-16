@@ -9,5 +9,7 @@
         <file>external/enemy.png</file>
         <file>external/player.png</file>
         <file>external/bg.jpg</file>
+        <file>external/fasterenemy.png</file>
+        <file>external/tankenemy.png</file>
     </qresource>
 </RCC>

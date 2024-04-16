@@ -1,9 +1,12 @@
-#include "Player.h"
-#include "Bullet.h"
-#include "Enemy.h"
+#include "Headers/Player.h"
+#include "Headers/Bullet.h"
+#include "Headers/Enemy.h"
+#include "Headers/FasterEnemy.h"
+#include "Headers/TankEnemy.h"
 #include <QKeyEvent>
 #include <QGraphicsScene>
 #include <QDebug>
+#include <cstdlib>
 
 Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent) {
     bulletsound = new QMediaPlayer();
@@ -50,7 +53,21 @@ void Player::keyPressEvent(QKeyEvent *event) {
 }
 
 void Player::spawn(){
-    // create an enemy
-    Enemy* enemy = new Enemy();
-    scene()->addItem(enemy);
-};
+    // Generate a random number between 0 and 2
+    int enemyType = rand() % 3;
+
+    // Create enemy based on the random number
+    if (enemyType == 0) {
+        // Spawn Enemy
+        Enemy* enemy = new Enemy();
+        scene()->addItem(enemy);
+    } else if (enemyType == 1) {
+        // Spawn FasterEnemy
+        FasterEnemy* fasterEnemy = new FasterEnemy();
+        scene()->addItem(fasterEnemy);
+    } else {
+        // Spawn TankEnemy
+        TankEnemy* tankEnemy = new TankEnemy();
+        scene()->addItem(tankEnemy);
+    }
+}
