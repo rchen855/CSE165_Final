@@ -5,6 +5,14 @@
 #include <QGraphicsScene>
 #include <QDebug>
 
+Player::Player(QGraphicsItem *parent): QGraphicsRectItem(parent) {
+    bulletsound = new QMediaPlayer();
+    audio = new QAudioOutput();
+    bulletsound->setAudioOutput(audio);
+    bulletsound->setSource(QUrl("qrc:/sounds/external/arrow.mp3"));
+    audio->setVolume(0.5);
+}
+
 void Player::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Left || event->key() == Qt::Key_A) {
         if (pos().x() > 0) {
@@ -31,6 +39,13 @@ void Player::keyPressEvent(QKeyEvent *event) {
         Bullet* bullet = new Bullet();
         bullet->setPos(x()+47.5,y()-50);
         scene()->addItem(bullet);
+        // play bullet sound
+        if (bulletsound->playbackState() == QMediaPlayer::PlayingState) {
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->playbackState() == QMediaPlayer::StoppedState) {
+            bulletsound->play();
+        }
     }
 }
 

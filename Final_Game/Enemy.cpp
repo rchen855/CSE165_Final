@@ -31,6 +31,7 @@ void Enemy::move()
         scene()->removeItem(this);
         delete this;
         game->health->decrease();
+        return;
     }
     QList<QGraphicsItem*> collisions = collidingItems();
     for (int i = 0; i < collisions.size(); i++) {

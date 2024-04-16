@@ -5,6 +5,8 @@
 #include <QGraphicsScene>
 #include <QDebug>
 #include <QList>
+#include <QMediaPlayer>
+#include <QAudioOutput>
 
 extern Game* game;
 
@@ -15,7 +17,6 @@ Bullet::Bullet() {
     // connect
     QTimer* timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(move()));
-
     timer->start(50);
 }
 
@@ -25,16 +26,22 @@ void Bullet::move()
     QList<QGraphicsItem*> collisions = collidingItems();
     for (int i = 0; i < collisions.size(); i++) {
         if (typeid(*(collisions[i])) == typeid(Enemy)) {
+            // play death sound
+            QMediaPlayer* music = new QMediaPlayer();
+            QAudioOutput* audio = new QAudioOutput();
+            music->setSource(QUrl("qrc:/sounds/external/death.mp3"));
+            music->setAudioOutput(audio);
+            audio->setVolume(0.5);
+            music->play();
             // increate the score
             game->score->increase();
             // remove from scene
             scene()->removeItem(collisions[i]);
             scene()->removeItem(this);
-            game->decreaseCount();
-            qDebug() << "shot enemy " << game->getEnemyCount();
             // delete both items
             delete collisions[i];
             delete this;
+
             return;
         }
     }
