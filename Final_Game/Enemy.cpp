@@ -13,7 +13,7 @@ Enemy::Enemy() {
     setPos(random_number,0);
 
     // creates the bullet
-    setRect(0,0,100,100);
+    setPixmap(QPixmap(":/images/external/enemy.png"));
 
     // connect
     QTimer* timer = new QTimer();

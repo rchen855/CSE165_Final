@@ -11,8 +11,8 @@
 extern Game* game;
 
 Bullet::Bullet() {
-    // creates the bullet
-    setRect(0,0,10,50);
+    // draw the bullet
+    setPixmap(QPixmap(":/images/external/arrow.png"));
 
     // connect
     QTimer* timer = new QTimer();
@@ -33,7 +33,7 @@ void Bullet::move()
             music->setAudioOutput(audio);
             audio->setVolume(0.5);
             music->play();
-            // increate the score
+            // increase the score
             game->score->increase();
             // remove from scene
             scene()->removeItem(collisions[i]);

@@ -5,7 +5,7 @@
 #include <QGraphicsScene>
 #include <QDebug>
 
-Player::Player(QGraphicsItem *parent): QGraphicsRectItem(parent) {
+Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent) {
     bulletsound = new QMediaPlayer();
     audio = new QAudioOutput();
     bulletsound->setAudioOutput(audio);
@@ -37,7 +37,7 @@ void Player::keyPressEvent(QKeyEvent *event) {
     else if (event->key() == Qt::Key_Space) {
         // create a bullet
         Bullet* bullet = new Bullet();
-        bullet->setPos(x()+47.5,y()-50);
+        bullet->setPos(x()+30,y()-50);
         scene()->addItem(bullet);
         // play bullet sound
         if (bulletsound->playbackState() == QMediaPlayer::PlayingState) {

@@ -7,6 +7,8 @@
 #include <QMediaPlayer>
 #include <QAudioOutput>
 #include <QDebug>
+#include <QBrush>
+#include <QImage>
 
 Game::Game(QWidget *parent) {
     // create a scene
@@ -17,12 +19,12 @@ Game::Game(QWidget *parent) {
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setBackgroundBrush(Qt::white);
+    setBackgroundBrush(QBrush(QImage(":/images/external/bg.jpg")));
     setFixedSize(800,800);
 
     // create Player to put into the scene
     player = new Player();
-    player->setRect(0,0,100,100);
+    player->setPixmap(QPixmap(":/images/external/player.png"));
     player->setPos(375,600);
 
     // make item focusable
