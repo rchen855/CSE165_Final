@@ -1,6 +1,6 @@
 #include "Headers/Player.h"
 #include "Headers/Bullet.h"
-#include "Headers/Enemy.h"
+#include "Headers/RegularEnemy.h"
 #include "Headers/FasterEnemy.h"
 #include "Headers/TankEnemy.h"
 #include <QKeyEvent>
@@ -59,7 +59,7 @@ void Player::spawn(){
     // Create enemy based on the random number
     if (enemyType == 0) {
         // Spawn Enemy
-        Enemy* enemy = new Enemy();
+        RegularEnemy* enemy = new RegularEnemy();
         scene()->addItem(enemy);
     } else if (enemyType == 1) {
         // Spawn FasterEnemy

@@ -1,5 +1,5 @@
 #include "Headers/Bullet.h"
-#include "Headers/Enemy.h"
+#include "Headers/RegularEnemy.h"
 #include "Headers/FasterEnemy.h"
 #include "Headers/TankEnemy.h"
 #include "Headers/Game.h"
@@ -30,9 +30,9 @@ void Bullet::move() {
     // Check for collisions with enemies
     QList<QGraphicsItem*> collisions = collidingItems();
     for (int i = 0; i < collisions.size(); i++) {
-        if (typeid(*(collisions[i])) == typeid(Enemy)) {
+        if (typeid(*(collisions[i])) == typeid(RegularEnemy)) {
             // Decrement health of collided enemy
-            Enemy* enemy = dynamic_cast<Enemy*>(collisions[i]);
+            RegularEnemy* enemy = dynamic_cast<RegularEnemy*>(collisions[i]);
             if (enemy) {
                 enemy->decreaseHealth();
                 if (enemy->getHealth() <= 0) {

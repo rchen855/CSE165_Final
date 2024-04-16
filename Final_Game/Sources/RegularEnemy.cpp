@@ -1,24 +1,23 @@
-#include "Headers/TankEnemy.h"
+#include "Headers/RegularEnemy.h"
+#include <QTimer>
+#include "Headers/Enemy.h"
+#include "Headers/Player.h"
 #include "Headers/Game.h"
 #include <QTimer>
+#include <QGraphicsScene>
+#include <QDebug>
 
 extern Game* game;
 
-TankEnemy::TankEnemy() : Enemy() {
-    // Initialize health to 2 (same as before)
-    Enemy::setHealth(3);
-
-    // Initialize speed to 3 (slower than before)
-    speed = 2;
-
-    // Set position and pixmap
-    setPixmap(QPixmap(":/images/external/tankenemy.png"));
+RegularEnemy::RegularEnemy(): Enemy() {
+    speed = 4;
+    setPixmap(QPixmap(":/images/external/enemy.png"));
     QTimer* timer = new QTimer();
     connect(timer, SIGNAL(timeout()), this, SLOT(move()));
     timer->start(50);
 }
 
-void TankEnemy::move() {
+void RegularEnemy::move() {
     // move enemy down
     setPos(x(),y()+speed);
     if (pos().y() > 800) {

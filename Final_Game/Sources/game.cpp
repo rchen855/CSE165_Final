@@ -34,6 +34,18 @@ Game::Game(QWidget *parent) {
     connect(music,&QMediaPlayer::mediaStatusChanged,music,&QMediaPlayer::play);
     music->play();
 
+    // create Player to put into the scene
+    player = new Player();
+    player->setPixmap(QPixmap(":/images/external/player.png"));
+    player->setPos(375,600);
+
+    // make item focusable
+    player->setFlag(QGraphicsItem::ItemIsFocusable);
+    player->setFocus();
+
+    timer = new QTimer();
+    QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
+
 }
 
 void Game::backToMenu() {
@@ -49,15 +61,6 @@ void Game::easyGame() {
     connect(backToMenu, SIGNAL(clicked()),this,SLOT(backToMenu()));
     scene ->addItem(backToMenu);
 
-    // create Player to put into the scene
-    player = new Player();
-    player->setPixmap(QPixmap(":/images/external/player.png"));
-    player->setPos(375,600);
-
-    // make item focusable
-    player->setFlag(QGraphicsItem::ItemIsFocusable);
-    player->setFocus();
-
     // add the item to the scene
     scene->addItem(player);
 
@@ -67,10 +70,6 @@ void Game::easyGame() {
     health = new Health();
     health->setPos(health->x(),health->y()+25);
     scene->addItem(health);
-
-    // spawn enemies
-    QTimer* timer = new QTimer();
-    QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
     timer->start(2000);
     show();
 }
@@ -83,17 +82,6 @@ void Game::medGame() {
     backToMenu->setPos(x,y);
     connect(backToMenu, SIGNAL(clicked()),this,SLOT(backToMenu()));
     scene ->addItem(backToMenu);
-
-    // create Player to put into the scene
-    player = new Player();
-    player->setPixmap(QPixmap(":/images/external/player.png"));
-    player->setPos(375,600);
-
-    // make item focusable
-    player->setFlag(QGraphicsItem::ItemIsFocusable);
-    player->setFocus();
-
-    // add the item to the scene
     scene->addItem(player);
 
     // create score
@@ -103,9 +91,6 @@ void Game::medGame() {
     health->setPos(health->x(),health->y()+25);
     scene->addItem(health);
 
-    // spawn enemies
-    QTimer* timer = new QTimer();
-    QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
     timer->start(1500);
     show();
 }
@@ -118,17 +103,6 @@ void Game::hardGame() {
     backToMenu->setPos(x,y);
     connect(backToMenu, SIGNAL(clicked()),this,SLOT(backToMenu()));
     scene ->addItem(backToMenu);
-
-    // create Player to put into the scene
-    player = new Player();
-    player->setPixmap(QPixmap(":/images/external/player.png"));
-    player->setPos(375,600);
-
-    // make item focusable
-    player->setFlag(QGraphicsItem::ItemIsFocusable);
-    player->setFocus();
-
-    // add the item to the scene
     scene->addItem(player);
 
     // create score
@@ -139,9 +113,12 @@ void Game::hardGame() {
     scene->addItem(health);
 
     // spawn enemies
-    QTimer* timer = new QTimer();
-    QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
     timer->start(1000);
+
+    if (health->getHealth() < 0) {
+        gameOver();
+    }
+
     show();
 }
 
@@ -187,6 +164,28 @@ void Game::displayMenu() {
     quit-> setPos(quitX, quitY);
     connect(quit, SIGNAL(clicked()),this,SLOT(close()));
     scene ->addItem(quit);
+}
+
+void Game::gameOver() {
+    timer->stop();
+    // title text
+    QGraphicsTextItem* gameOver = new QGraphicsTextItem(QString("Game Over!"));
+    QFont gameOverFont("comic sans",50);
+    gameOver->setDefaultTextColor(Qt::red);
+    gameOver->setFont(gameOverFont);
+    int gameOverX = this->width()/2 - gameOver->boundingRect().width()/2;
+    int gameOverY = 150;
+    gameOver->setPos(gameOverX, gameOverY);
+    scene->addItem(gameOver);
+
+    // // quit button
+    Menu* quit = new Menu(QString("Quit"));
+    int quitX = this-> width()/2 - quit->boundingRect().width()/2;
+    int quitY = 275;
+    quit-> setPos(quitX, quitY);
+    connect(quit, SIGNAL(clicked()),this,SLOT(close()));
+    scene ->addItem(quit);
+
 }
 
 

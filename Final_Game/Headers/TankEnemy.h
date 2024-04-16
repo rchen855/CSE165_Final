@@ -6,6 +6,7 @@
 class TankEnemy : public Enemy {
 public:
     TankEnemy();
+    void move() override;
 };
 
 #endif // TANKENEMY_H

@@ -13,7 +13,7 @@ public:
     void decreaseHealth();
     void setHealth(int health);
 public slots:
-    void move();
+    virtual void move() = 0;
 private:
     int health;
 };

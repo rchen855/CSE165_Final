@@ -10,6 +10,7 @@
 #include <QObject>
 #include <QOpenGLWidget>
 #include <QPushButton>
+#include <QTimer>
 
 class Game: public QGraphicsView {
     Q_OBJECT
@@ -19,7 +20,9 @@ public:
     Player* player;
     Score* score;
     Health* health;
+    QTimer* timer;
     void displayMenu();
+    void gameOver();
 public slots:
     void backToMenu();
     void easyGame();

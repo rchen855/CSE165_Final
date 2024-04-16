@@ -6,6 +6,7 @@
 class FasterEnemy: public Enemy {
 public:
     FasterEnemy();
+    void move() override;
 };
 
 

@@ -12,6 +12,7 @@ CONFIG += c++17
 SOURCES += \
     Sources/FasterEnemy.cpp \
     Sources/Menu.cpp \
+    Sources/RegularEnemy.cpp \
     Sources/TankEnemy.cpp \
     Sources/main.cpp \
     Sources/Bullet.cpp \
@@ -28,6 +29,7 @@ HEADERS += \
     Headers/Game.h \
     Headers/Menu.h \
     Headers/Player.h \
+    Headers/RegularEnemy.h \
     Headers/Score.h \
     Headers/Health.h \
     Headers/TankEnemy.h
