@@ -1,5 +1,5 @@
 #include <QApplication>
-#include "game.h"
+#include "Game.h"
 
 Game* game;
 

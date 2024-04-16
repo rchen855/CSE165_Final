@@ -1,13 +1,14 @@
-#include "game.h"
+#include "Game.h"
 #include <QApplication>
 #include <QGraphicsScene>
 #include "Player.h"
 #include <QGraphicsView>
 #include <QTimer>
-
+#include <QMediaPlayer>
+#include <QAudioOutput>
+#include <QDebug>
 
 Game::Game(QWidget *parent) {
-
     // create a scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,800);
@@ -44,6 +45,15 @@ Game::Game(QWidget *parent) {
     timer->start(2000);
 
     //play background music
+    QMediaPlayer* music = new QMediaPlayer();
+    QAudioOutput* audio = new QAudioOutput();
+    music->setAudioOutput(audio);
+    music->setSource(QUrl("qrc:/sounds/external/bgm.mp3"));
+    audio->setVolume(0.05);
+    connect(music,&QMediaPlayer::mediaStatusChanged,music,&QMediaPlayer::play);
+    music->play();
 
     show();
 }
+
+

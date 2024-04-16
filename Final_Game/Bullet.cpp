@@ -1,6 +1,6 @@
 #include "Bullet.h"
 #include "Enemy.h"
-#include "game.h"
+#include "Game.h"
 #include <QTimer>
 #include <QGraphicsScene>
 #include <QDebug>
@@ -30,6 +30,8 @@ void Bullet::move()
             // remove from scene
             scene()->removeItem(collisions[i]);
             scene()->removeItem(this);
+            game->decreaseCount();
+            qDebug() << "shot enemy " << game->getEnemyCount();
             // delete both items
             delete collisions[i];
             delete this;

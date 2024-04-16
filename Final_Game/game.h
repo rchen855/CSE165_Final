@@ -16,6 +16,11 @@ public:
     Player* player;
     Score* score;
     Health* health;
+    int getEnemyCount();
+    void decreaseCount();
+    void increaseCount();
+private:
+    int enemyCount;
 };
 
 #endif // GAME_H
