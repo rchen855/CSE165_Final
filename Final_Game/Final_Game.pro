@@ -1,4 +1,4 @@
-QT       += core gui \
+QT       += core gui openglwidgets \
             multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -11,6 +11,7 @@ CONFIG += c++17
 
 SOURCES += \
     Sources/FasterEnemy.cpp \
+    Sources/Menu.cpp \
     Sources/TankEnemy.cpp \
     Sources/main.cpp \
     Sources/Bullet.cpp \
@@ -25,6 +26,7 @@ HEADERS += \
     Headers/Enemy.h \
     Headers/FasterEnemy.h \
     Headers/Game.h \
+    Headers/Menu.h \
     Headers/Player.h \
     Headers/Score.h \
     Headers/Health.h \

@@ -36,8 +36,7 @@ void Enemy::setHealth(int h) {
     health = h;
 }
 
-void Enemy::move()
-{
+void Enemy::move() {
     // move enemy down
     setPos(x(),y()+speed);
     if (pos().y() > 800) {
