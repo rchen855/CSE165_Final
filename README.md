@@ -17,7 +17,8 @@ Mushroom Kingdom is an engaging game where you take on the role of a mushroom wa
   
 ### How to Play:
 
-- Use keyboard controls to move your mushroom character.
+- Use keyboard controls (WASD or arrow keys) to move your mushroom character.
+- Use the spacebar to shoot at your enemies.
 - Aim and shoot at enemy mushrooms using the provided controls.
 - Avoid contact with enemy mushrooms and prevent them from reaching your side of the plains.
 - Survive for as long as possible to achieve the highest score.
