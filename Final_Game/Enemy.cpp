@@ -9,8 +9,6 @@
 extern Game* game;
 
 Enemy::Enemy() {
-    game->increaseCount();
-    qDebug() << "adding enemy " << game->getEnemyCount();
     int random_number = rand() % 700;
     setPos(random_number,0);
 
@@ -33,16 +31,12 @@ void Enemy::move()
         scene()->removeItem(this);
         delete this;
         game->health->decrease();
-        game->decreaseCount();
-        qDebug() << "removing enemy " << game->getEnemyCount();
     }
     QList<QGraphicsItem*> collisions = collidingItems();
     for (int i = 0; i < collisions.size(); i++) {
         if (typeid(*(collisions[i])) == typeid(Player)) {
             // increate the score
             game->health->decrease();
-            game->decreaseCount();
-            qDebug() << "removing enemy " << game->getEnemyCount();
             // remove from scene
             scene()->removeItem(this);
             // delete both items
