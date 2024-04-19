@@ -168,6 +168,12 @@ void Game::displayMenu() {
 
 void Game::gameOver() {
     timer->stop();
+    for (int i = 0; i < scene->items().size(); i++) {
+        if (typeid(*(items()[i])) != typeid(Score)) {
+            scene->items()[i]->setEnabled(false);
+            scene->items()[i]->setOpacity(0);
+        }
+    }
     QMediaPlayer* music = new QMediaPlayer();
     QAudioOutput* audio = new QAudioOutput();
     music->setAudioOutput(audio);
@@ -183,6 +189,9 @@ void Game::gameOver() {
     int gameOverY = 150;
     gameOver->setPos(gameOverX, gameOverY);
     scene->addItem(gameOver);
+    int sX = (this->width()/2 - gameOver->boundingRect().width()/2) + 125;
+    int sY = 230;
+    score->setPos(sX,sY);
 
     // // quit button
     Menu* quit = new Menu(QString("Quit"));
