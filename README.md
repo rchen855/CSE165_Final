@@ -24,3 +24,6 @@ Mushroom Kingdom is an engaging game where you take on the role of a mushroom wa
 - Survive for as long as possible to achieve the highest score.
 
 ### Good luck, Mushroom Soldier! Protect your land and emerge victorious in the Mushroom Kingdom! 🍄🛡️🎮
+
+### Credits
+Art by: Salina Xoi
