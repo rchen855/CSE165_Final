@@ -25,6 +25,7 @@ public:
     void gameOver();
 public slots:
     void backToMenu();
+    void tutorial();
     void easyGame();
     void medGame();
     void hardGame();
