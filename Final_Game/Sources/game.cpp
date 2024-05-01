@@ -213,13 +213,6 @@ void Game::gameOver() {
             scene->items()[i]->setOpacity(0);
         }
     }
-    Menu* backToMenu2 = new Menu(QString("Back to Menu"));
-    int x2 = 595;
-    int y2 = 5;
-    backToMenu2->setPos(x2,y2);
-    connect(backToMenu2, SIGNAL(clicked()),this,SLOT(backToMenu()));
-    scene ->addItem(backToMenu2);
-    scene->addItem(player);
     QMediaPlayer* music = new QMediaPlayer();
     QAudioOutput* audio = new QAudioOutput();
     music->setAudioOutput(audio);
